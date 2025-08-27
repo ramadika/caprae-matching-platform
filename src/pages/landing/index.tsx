@@ -10,12 +10,12 @@ import { NavLink } from "react-router";
 
 export default function Index() {
   return (
-    <div className="h-screen bg-gradient-to-br from-emerald-50 via-white to-orange-50">
+    <div className="h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50">
       <div className="w-full flex flex-col justify-center items-center h-screen px-6 py-20 text-center font-inter">
         <h1 className="text-5xl md:text-6xl text-gray-900 mb-6 font-semibold animate-slide-in">
           Where Great Businesses
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048A81] to-[#F95738]">
             &nbsp;Find Perfect Matches
           </span>
         </h1>
@@ -27,16 +27,16 @@ export default function Index() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <NavLink
-            to="/seller-onboarding"
-            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-xl font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2"
+            to="/onboarding/seller"
+            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#048A81] to-[#048A81] text-white rounded-xl font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <Building2 className="w-5 h-5" />
             <span>I'm Selling My Business</span>
             <ArrowRight className="w-5 h-5" />
           </NavLink>
           <NavLink
-            to="/buyer-onboarding"
-            className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-orange-500 text-orange-600 rounded-xl font-semibold text-lg hover:bg-orange-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2"
+            to="/onboarding/buyer"
+            className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-[#F95738] text-[#F95738] rounded-xl font-semibold text-lg hover:bg-orange-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <TrendingUp className="w-5 h-5" />
             <span>I'm Looking to Buy</span>

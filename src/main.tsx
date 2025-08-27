@@ -4,8 +4,10 @@ import { HashRouter, Routes, Route } from "react-router";
 import "./index.css";
 import ScrollToTop from "@/utils/ScrollToTop";
 import Landing from "@/pages/landing";
-import Seller from "@/pages/questionnaire/seller-onboarding";
-import Buyer from "@/pages/questionnaire/buyer-onboarding";
+import SellerOnboarding from "@/pages/onboarding/seller-onboarding";
+import BuyerOnboarding from "@/pages/onboarding/buyer-onboarding";
+import SellerDashboard from "@/pages/dashboard/seller-dashboard";
+import BuyerDashboard from "@/pages/dashboard/buyer-dashboard";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,8 +15,10 @@ createRoot(document.getElementById("root")!).render(
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/onboarding/seller" element={<Seller />} />
-        <Route path="/onboarding/buyer" element={<Buyer />} />
+        <Route path="/onboarding/seller" element={<SellerOnboarding />} />
+        <Route path="/onboarding/buyer" element={<BuyerOnboarding />} />
+        <Route path="/dashboard/seller" element={<SellerDashboard />} />
+        <Route path="/dashboard/buyer" element={<BuyerDashboard />} />
       </Routes>
     </HashRouter>
   </StrictMode>

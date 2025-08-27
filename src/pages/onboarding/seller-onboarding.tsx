@@ -19,7 +19,7 @@ export default function Index() {
     if (onboardingStep < totalSteps) {
       setOnboardingStep(onboardingStep + 1);
     } else {
-      navigate("/dashboard");
+      navigate("/dashboard/seller");
       setOnboardingStep(1);
     }
   };
