@@ -9,6 +9,7 @@ import BuyerOnboarding from "@/pages/onboarding/buyer-onboarding";
 import SellerDashboard from "@/pages/dashboard/seller-dashboard";
 import BuyerDashboard from "@/pages/dashboard/buyer-dashboard";
 import Matching from "@/pages/matching";
+import Deals from '@/pages/deals'
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/dashboard/seller" element={<SellerDashboard />} />
         <Route path="/dashboard/buyer" element={<BuyerDashboard />} />
         <Route path="/discover" element={<Matching />} />
+        <Route path="/deals" element={<Deals />} />
       </Routes>
     </HashRouter>
   </StrictMode>

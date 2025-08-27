@@ -59,11 +59,11 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-1 border bg-[#048A81] text-white rounded-2xl px-4 py-0.5 shadow-2xl">
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Building className="h-5 w-5" />
             </div>
-            <span className="text-xl font-bold text-foreground">BizMatch</span>
+            <span className="text-base font-bold text-shadow-md">BizMatch</span>
           </Link>
 
           {/* Navigation Links */}
@@ -79,10 +79,7 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
                     <item.icon className="h-4 w-4 mr-2" />
                     {item.label}
                     {item.badge && (
-                      <Badge
-                        variant="destructive"
-                        className="ml-2 h-5 w-5 p-0 text-xs"
-                      >
+                      <Badge className="ml-2 h-5 w-5 p-0 text-xs bg-[#F95738]">
                         {item.badge}
                       </Badge>
                     )}
@@ -98,10 +95,7 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
             <Button variant="ghost" size="sm" className="relative">
               <Bell className="h-4 w-4" />
               {notifications > 0 && (
-                <Badge
-                  variant="destructive"
-                  className="absolute -top-1 -right-1 h-5 w-5 p-0 text-xs"
-                >
+                <Badge className="absolute -top-1 -right-1 h-5 w-5 p-0 text-xs bg-[#F95738]">
                   {notifications}
                 </Badge>
               )}
