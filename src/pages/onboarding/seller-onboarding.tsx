@@ -33,13 +33,13 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-orange-50 flex items-center justify-center p-6 font-lato">
+    <div className="min-h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50 flex items-center justify-center p-6 font-lato">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Progress Header */}
-        <div className="bg-gradient-to-r from-emerald-600 to-orange-500 p-6 text-white">
+        <div className="bg-gradient-to-r from-[#048A81] to-[#F95738] p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-bold">Seller Onboarding</h1>
-            <span className="text-emerald-100">
+            <span className="text-emerald-50">
               {onboardingStep} of {totalSteps}
             </span>
           </div>
@@ -57,7 +57,7 @@ export default function Index() {
             {onboardingStep === 1 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <Building2 className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
+                  <Building2 className="w-16 h-16 text-[#048A81] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Tell us about your business
                   </h2>
@@ -125,7 +125,7 @@ export default function Index() {
             {onboardingStep === 2 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <DollarSign className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
+                  <DollarSign className="w-16 h-16 text-[#048A81] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Financial Overview
                   </h2>
@@ -198,7 +198,7 @@ export default function Index() {
             {onboardingStep === 3 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <Users className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
+                  <Users className="w-16 h-16 text-[#048A81] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Deal Preferences
                   </h2>
@@ -216,7 +216,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
                         />
                         <span>
                           Strategic Buyer (Competitor/Industry Player)
@@ -225,7 +225,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
                         />
                         <span>
                           Financial Buyer (Private Equity/Investment Firm)
@@ -234,7 +234,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
                         />
                         <span>Individual Investor/Entrepreneur</span>
                       </label>
@@ -338,7 +338,7 @@ export default function Index() {
 
             <button
               onClick={nextStep}
-              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-emerald-600 hover:bg-emerald-700 cursor-pointer"
+              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#048A81] hover:bg-emerald-700 cursor-pointer"
             >
               {onboardingStep === totalSteps ? "Complete Setup" : "Continue"}
             </button>

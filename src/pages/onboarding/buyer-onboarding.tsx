@@ -26,10 +26,10 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-orange-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50 flex items-center justify-center p-6">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Progress Header */}
-        <div className="bg-gradient-to-r from-emerald-600 to-orange-500 p-6 text-white">
+        <div className="bg-gradient-to-r from-[#048A81] to-[#F95738] p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-bold">Buyer Onboarding</h1>
             <span className="text-emerald-100">
@@ -50,7 +50,7 @@ export default function Index() {
             {onboardingStep === 1 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <TrendingUp className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+                  <TrendingUp className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Investment Profile
                   </h2>
@@ -133,7 +133,7 @@ export default function Index() {
                         >
                           <input
                             type="checkbox"
-                            className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                            className="rounded border-gray-300 text-[#F95738] focus:ring-orange-500"
                           />
                           <span className="text-sm">{industry}</span>
                         </label>
@@ -147,7 +147,7 @@ export default function Index() {
             {onboardingStep === 2 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <MapPin className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+                  <MapPin className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Deal Preferences
                   </h2>
@@ -195,7 +195,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-orange-600 focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-orange-500"
                         />
                         <span>Majority Acquisition (51%+)</span>
                       </label>
@@ -203,7 +203,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-orange-600 focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-orange-500"
                         />
                         <span>Full Acquisition (100%)</span>
                       </label>
@@ -211,7 +211,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-orange-600 focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-orange-500"
                         />
                         <span>Minority Investment</span>
                       </label>
@@ -236,7 +236,7 @@ export default function Index() {
             {onboardingStep === 3 && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <CheckCircle className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+                  <CheckCircle className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Verification & Credentials
                   </h2>
@@ -326,7 +326,7 @@ export default function Index() {
 
             <button
               onClick={nextStep}
-              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-orange-600 hover:bg-orange-700 cursor-pointer"
+              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#F95738] hover:bg-orange-700 cursor-pointer"
             >
               {onboardingStep === totalSteps ? "Complete Setup" : "Continue"}
             </button>
