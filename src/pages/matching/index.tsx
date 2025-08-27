@@ -90,10 +90,10 @@ const mockBuyerProfiles = [
 
 export default function MatchingInterface() {
   const [currentProfileIndex, setCurrentProfileIndex] = useState(0);
-  const [profiles, setProfiles] = useState(mockBuyerProfiles);
   const [matches, setMatches] = useState<string[]>([]);
   const [passed, setPassed] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [profiles] = useState(mockBuyerProfiles);
 
   const navigate = useNavigate();
 
@@ -110,6 +110,7 @@ export default function MatchingInterface() {
   };
 
   const moveToNext = () => {
+    console.log("passed", passed);
     if (currentProfileIndex < profiles.length - 1) {
       setCurrentProfileIndex((prev) => prev + 1);
     } else {
