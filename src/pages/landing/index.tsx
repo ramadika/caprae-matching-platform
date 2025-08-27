@@ -1,4 +1,5 @@
 import {
+  Building,
   Building2,
   TrendingUp,
   Shield,
@@ -12,7 +13,12 @@ export default function Index() {
   return (
     <div className="h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50">
       <div className="w-full flex flex-col justify-center items-center h-screen px-6 py-20 text-center font-inter">
-        <h1 className="text-5xl md:text-6xl text-gray-900 mb-6 font-semibold animate-slide-in">
+        <div className="flex justify-center mb-8">
+          <div className="w-16 h-16 bg-[#048A81] rounded-2xl flex items-center justify-center shadow-elevated">
+            <Building className="h-8 w-8 text-white" />
+          </div>
+        </div>
+        <h1 className="text-5xl md:text-6xl text-gray-900 mb-6 font-bold animate-slide-in font-raleway">
           Where Great Businesses
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048A81] to-[#F95738]">
