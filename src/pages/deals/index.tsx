@@ -162,13 +162,13 @@ export default function DealsPage() {
           <h1 className="text-3xl font-bold text-foreground mb-2">
             Deal Management
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground max-md:text-sm">
             Track and manage your active business sale negotiations
           </p>
         </div>
 
         {/* Overview Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-md:gap-4">
           <Card>
             <CardContent>
               <div className="flex items-center justify-between">
@@ -254,7 +254,7 @@ export default function DealsPage() {
                 className="shadow-card hover:shadow-elevated transition-all duration-300"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start justify-between mb-6 max-md:flex-col max-md:gap-4">
                     <div className="flex items-center space-x-4">
                       <Avatar className="h-12 w-12">
                         <AvatarImage
@@ -269,19 +269,22 @@ export default function DealsPage() {
                         </AvatarFallback>
                       </Avatar>
                       <div>
-                        <h3 className="text-xl font-semibold text-foreground">
+                        <h3 className="text-xl font-semibold text-foreground max-md:text-lg">
                           {deal.buyerName}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground max-md:text-sm">
                           {deal.buyerCompany}
                         </p>
-                        <Badge variant="outline" className="mt-1">
+                        <Badge
+                          variant="outline"
+                          className="mt-1 max-md:text-sm"
+                        >
                           {deal.businessName}
                         </Badge>
                       </div>
                     </div>
 
-                    <div className="text-right">
+                    <div>
                       <div className="text-2xl font-bold text-[#048A81]">
                         {formatCurrency(deal.offerAmount)}
                       </div>
@@ -351,7 +354,7 @@ export default function DealsPage() {
                         {deal.aiInsights.map((insight, index) => (
                           <li
                             key={index}
-                            className="text-sm text-muted-foreground flex items-start space-x-2"
+                            className="text-sm text-muted-foreground flex items-start space-x-2 max-md:text-xs"
                           >
                             <span className="text-[#0D3B66]">•</span>
                             <span>{insight}</span>

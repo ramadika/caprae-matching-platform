@@ -35,15 +35,15 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
       icon: Users,
     },
     {
+      label: "Deals",
+      path: "/deals",
+      icon: Building,
+    },
+    {
       label: "Messages",
       path: "/messages",
       icon: MessageCircle,
       badge: 2,
-    },
-    {
-      label: "Deals",
-      path: "/deals",
-      icon: Building,
     },
   ];
 
