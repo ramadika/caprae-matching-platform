@@ -76,16 +76,16 @@ export default function SellerDashboard() {
           <h1 className="text-3xl font-bold text-[#F95738] mb-2">
             Welcome back, Jane! 👋
           </h1>
-          <p className="text-[#048A81]">
+          <p className="text-[#048A81] max-md:text-sm">
             Your TechFlow SaaS listing is performing well. You have 8 new buyer
             matches to review.
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8 max-md:gap-4">
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Profile Views</p>
@@ -102,7 +102,7 @@ export default function SellerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Buyer Interest</p>
@@ -119,7 +119,7 @@ export default function SellerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Active Matches</p>
@@ -136,7 +136,7 @@ export default function SellerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Business Value</p>
@@ -188,14 +188,29 @@ export default function SellerDashboard() {
                             .join("")}
                         </AvatarFallback>
                       </Avatar>
-                      <div>
+                      <div className="max-md:flex max-md:flex-col max-md:items-start max-md:gap-1">
+                        <div className="flex gap-2 md:hidden">
+                          <Badge
+                            variant={
+                              match.status === "interested"
+                                ? "default"
+                                : "secondary"
+                            }
+                            className="mb-2"
+                          >
+                            {match.status}
+                          </Badge>
+                          <p className="text-xs text-[#048A81]">
+                            {match.lastActive}
+                          </p>
+                        </div>
                         <h4 className="font-semibold text-[#0D3B66]">
                           {match.name}
                         </h4>
                         <p className="text-sm text-[#048A81]">
                           {match.company}
                         </p>
-                        <div className="flex items-center space-x-2 mt-1">
+                        <div className="flex items-center space-x-2 max-md:flex-col max-md:space-x-0 max-md:gap-1">
                           <Badge variant="outline" className="text-xs">
                             {match.budget}
                           </Badge>
@@ -208,7 +223,7 @@ export default function SellerDashboard() {
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right max-md:hidden">
                       <Badge
                         variant={
                           match.status === "interested"

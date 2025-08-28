@@ -9,14 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Building,
-  Users,
-  MessageCircle,
-  BarChart3,
-  Settings,
-  Bell,
-} from "lucide-react";
+import { Building, Users, MessageCircle, BarChart3, Bell } from "lucide-react";
 
 interface NavigationProps {
   userRole: "buyer" | "seller";
@@ -117,11 +110,26 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end">
-                <DropdownMenuItem>
-                  <Settings className="mr-2 h-4 w-4" />
-                  Settings
-                </DropdownMenuItem>
+              <DropdownMenuContent className="w-56 text-foreground" align="end">
+                {navItems.map((item) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <Link key={item.path} to={item.path}>
+                      <Button
+                        variant={isActive ? "secondary" : "ghost"}
+                        className="relative cursor-pointer"
+                      >
+                        <item.icon className="h-4 w-4 mr-2" />
+                        {item.label}
+                        {item.badge && (
+                          <Badge className="ml-2 h-5 w-5 p-0 text-xs bg-[#F95738]">
+                            {item.badge}
+                          </Badge>
+                        )}
+                      </Button>
+                    </Link>
+                  );
+                })}
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Sign out</DropdownMenuItem>
               </DropdownMenuContent>

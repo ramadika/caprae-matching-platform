@@ -108,7 +108,7 @@ export default function BuyerDashboard() {
           <h1 className="text-3xl font-bold text-[#F95738] mb-2">
             Welcome back, Michael! 👋
           </h1>
-          <p className="text-[#048A81]">
+          <p className="text-[#048A81] max-md:text-sm">
             You have 3 new business matches and 2 sellers interested in
             connecting with you.
           </p>
@@ -117,7 +117,7 @@ export default function BuyerDashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Saved Businesses</p>
@@ -132,7 +132,7 @@ export default function BuyerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Active Offers</p>
@@ -147,7 +147,7 @@ export default function BuyerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">New Matches</p>
@@ -162,7 +162,7 @@ export default function BuyerDashboard() {
           </Card>
 
           <Card className="shadow-card">
-            <CardContent className="p-6">
+            <CardContent>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-[#048A81]">Available Budget</p>
@@ -204,7 +204,7 @@ export default function BuyerDashboard() {
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <div className="flex items-center space-x-2 mb-2">
+                        <div className="flex items-center space-x-2 mb-2 max-md:flex-col max-md:space-x-0 max-md:items-start max-md:gap-1">
                           <h4 className="text-lg font-semibold text-[#0D3B66]">
                             {business.name}
                           </h4>
@@ -244,9 +244,28 @@ export default function BuyerDashboard() {
                             </span>
                           </div>
                         </div>
+
+                        <div className="flex items-center space-x-2 mt-4 md:hidden">
+                          <Button variant="outline" size="sm">
+                            <Eye className="h-4 w-4 mr-1" />
+                            View
+                          </Button>
+                          <Button
+                            variant={business.liked ? "default" : "outline"}
+                            size="sm"
+                            className={business.liked ? "bg-[#F95738]" : ""}
+                          >
+                            <Heart
+                              className={`h-4 w-4 mr-1 ${
+                                business.liked ? "fill-current" : ""
+                              }`}
+                            />
+                            {business.liked ? "Saved" : "Save"}
+                          </Button>
+                        </div>
                       </div>
 
-                      <div className="flex items-center space-x-2 ml-4">
+                      <div className="flex items-center space-x-2 ml-4 max-md:hidden">
                         <Button variant="outline" size="sm">
                           <Eye className="h-4 w-4 mr-1" />
                           View
