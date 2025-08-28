@@ -111,25 +111,27 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 text-foreground" align="end">
-                {navItems.map((item) => {
-                  const isActive = location.pathname === item.path;
-                  return (
-                    <Link key={item.path} to={item.path}>
-                      <Button
-                        variant={isActive ? "secondary" : "ghost"}
-                        className="relative cursor-pointer"
-                      >
-                        <item.icon className="h-4 w-4 mr-2" />
-                        {item.label}
-                        {item.badge && (
-                          <Badge className="ml-2 h-5 w-5 p-0 text-xs bg-[#F95738]">
-                            {item.badge}
-                          </Badge>
-                        )}
-                      </Button>
-                    </Link>
-                  );
-                })}
+                <div className="md:hidden">
+                  {navItems.map((item) => {
+                    const isActive = location.pathname === item.path;
+                    return (
+                      <Link key={item.path} to={item.path}>
+                        <Button
+                          variant={isActive ? "secondary" : "ghost"}
+                          className="relative cursor-pointer"
+                        >
+                          <item.icon className="h-4 w-4 mr-2" />
+                          {item.label}
+                          {item.badge && (
+                            <Badge className="ml-2 h-5 w-5 p-0 text-xs bg-[#F95738]">
+                              {item.badge}
+                            </Badge>
+                          )}
+                        </Button>
+                      </Link>
+                    );
+                  })}
+                </div>
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Sign out</DropdownMenuItem>
               </DropdownMenuContent>

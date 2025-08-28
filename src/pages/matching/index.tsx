@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -99,7 +99,7 @@ export default function MatchingInterface() {
   >(null);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const currentProfile = profiles[currentProfileIndex];
 
@@ -188,7 +188,7 @@ export default function MatchingInterface() {
 
   return (
     <div className="min-h-screen bg-[#F5F8FE]">
-      {/* <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} /> */}
+      <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} />
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div
           aria-hidden="true"
@@ -202,12 +202,12 @@ export default function MatchingInterface() {
             className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#048A81] to-[#F95738] opacity-30 sm:left-[calc(50%-40rem)] sm:w-288.75"
           />
         </div>
-        <Button
+        {/* <Button
           className="bg-transparent text-[#0D3B66] border border-[#0D3B66] mb-4 cursor-pointer hover:text-white hover:bg-[#0D3B66]"
           onClick={() => navigate(-1)}
         >
           &#8592;&nbsp;Back to Dashboard
-        </Button>
+        </Button> */}
         {/* Header */}
         <div className="flex items-center justify-center text-center mb-12">
           <div>

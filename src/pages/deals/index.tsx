@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,6 +24,7 @@ import {
   Upload,
   TrendingUp,
 } from "lucide-react";
+import { Navigation } from "@/components/navigation";
 
 interface Deal {
   id: string;
@@ -120,7 +121,7 @@ export default function DealsPage() {
   const [activeTab, setActiveTab] = useState("active");
   const [deals] = useState(mockDeals);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-US", {
@@ -150,13 +151,14 @@ export default function DealsPage() {
 
   return (
     <div className="min-h-screen bg-[#F5F8FE]">
+      <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Button
+        {/* <Button
           className="bg-transparent text-[#0D3B66] border border-[#0D3B66] mb-4 cursor-pointer hover:text-white hover:bg-[#0D3B66]"
           onClick={() => navigate(-1)}
         >
           &#8592;&nbsp;Back to Dashboard
-        </Button>
+        </Button> */}
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">
