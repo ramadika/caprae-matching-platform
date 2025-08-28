@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BuyerProfileCard } from "@/components/card-profile";
+import { BuyerProfileDetailed } from "@/components/detail-profile";
 import { RefreshCw, Heart, X, Sparkles } from "lucide-react";
 
 // Mock buyer profiles data
@@ -94,6 +95,10 @@ export default function MatchingInterface() {
   const [passed, setPassed] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [profiles] = useState(mockBuyerProfiles);
+  const [selectedProfile, setSelectedProfile] = useState<
+    (typeof mockBuyerProfiles)[0] | null
+  >(null);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -127,8 +132,11 @@ export default function MatchingInterface() {
   };
 
   const handleViewProfile = (profileId: string) => {
-    // In a real app, this would open a detailed profile modal/page
-    console.log("View profile:", profileId);
+    const profile = profiles.find((p) => p.id === profileId);
+    if (profile) {
+      setSelectedProfile(profile);
+      setIsProfileModalOpen(true);
+    }
   };
 
   if (isLoading) {
@@ -181,7 +189,7 @@ export default function MatchingInterface() {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} /> */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <Button
           className="bg-transparent text-[#0D3B66] border border-[#0D3B66] mb-4 cursor-pointer hover:text-white hover:bg-[#0D3B66]"
           onClick={() => navigate(-1)}
@@ -315,6 +323,14 @@ export default function MatchingInterface() {
             </div>
           </div>
         </div>
+        {/* Detailed Profile Modal */}
+        <BuyerProfileDetailed
+          profile={selectedProfile}
+          isOpen={isProfileModalOpen}
+          onClose={() => setIsProfileModalOpen(false)}
+          onConnect={handleLike}
+          onPass={handlePass}
+        />
       </div>
     </div>
   );

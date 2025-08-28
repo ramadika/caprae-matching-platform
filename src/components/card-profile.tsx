@@ -117,9 +117,9 @@ export function BuyerProfileCard({
             variant="ghost"
             size="sm"
             onClick={() => onViewProfile(profile.id)}
-            className="shrink-0"
+            className="shrink-0 cursor-pointer"
           >
-            <Eye className="h-4 w-4" />
+            <Eye className="h-4 w-4 text-[#F95738]" />
           </Button>
         </div>
 
@@ -169,7 +169,7 @@ export function BuyerProfileCard({
         {/* Timeline */}
         <div className="mb-4">
           <div className="flex items-center space-x-2 mb-1">
-            <Calendar className="h-4 w-4 text-accent" />
+            <Calendar className="h-4 w-4 text-[#F95738]" />
             <span className="font-medium">Timeline</span>
           </div>
           <p className="text-muted-foreground">{profile.timeline}</p>
