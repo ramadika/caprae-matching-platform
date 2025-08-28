@@ -1,9 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -123,14 +118,10 @@ export function BuyerProfileDetailed({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto max-w-4xl">
+      <DialogContent className="max-h-[90vh] overflow-y-auto max-w-4xl max-md:max-w-full">
         <DialogHeader className="pb-6">
-          <DialogTitle className="underline underline-offset-4">
-            Buyer Profile Details
-          </DialogTitle>
-
           {/* Profile Header */}
-          <div className="flex items-start space-x-6 mt-12">
+          <div className="flex items-start space-x-6 mt-12 max-md:flex-col max-md:gap-2">
             <Avatar className="h-24 w-24">
               <AvatarImage src={profile.avatar} alt={profile.name} />
               <AvatarFallback className="bg-[#0D3B66] text-white text-2xl">
@@ -142,20 +133,22 @@ export function BuyerProfileDetailed({
             </Avatar>
 
             <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-2">
-                <h2 className="text-3xl font-bold text-foreground">
+              <div className="flex items-center space-x-3 mb-2 max-md:flex-col max-md:items-start max-md:gap-2">
+                <h2 className="text-3xl font-bold text-foreground max-md:text-xl">
                   {profile.name}
                 </h2>
-                {profile.verified && (
-                  <CheckCircle className="h-6 w-6 text-[#048A81]" />
-                )}
-                <Badge className="bg-[#048A81] text-white">94% Match</Badge>
+                <div className="flex gap-2">
+                  {profile.verified && (
+                    <CheckCircle className="h-6 w-6 text-[#048A81]" />
+                  )}
+                  <Badge className="bg-[#048A81] text-white">94% Match</Badge>
+                </div>
               </div>
 
-              <div className="flex items-center space-x-4 mb-3">
-                <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-4 mb-3 max-md:flex-col max-md:items-start max-md:gap-2">
+                <div className="flex items-center space-x-2 max-md:text-base">
                   <Building className="h-5 w-5 text-[#0D3B66]" />
-                  <span className="text-lg font-semibold text-muted-foreground">
+                  <span className="text-lg font-semibold text-muted-foreground max-md:text-base">
                     {profile.company}
                   </span>
                 </div>
@@ -167,7 +160,7 @@ export function BuyerProfileDetailed({
                 </div>
               </div>
 
-              <div className="flex items-center space-x-6 mb-4">
+              <div className="flex items-center space-x-6 mb-4 max-md:flex-col max-md:items-start max-md:gap-2">
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5 text-[#F4D35E] fill-current" />
                   <span className="font-semibold">{profile.rating}</span>
@@ -184,7 +177,7 @@ export function BuyerProfileDetailed({
               </div>
 
               {/* Quick Contact */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 max-md:flex-col max-md:gap-2 max-md:items-start">
                 <Button size="sm" variant="outline">
                   <Mail className="h-4 w-4 mr-2" />
                   {extendedData.contactInfo.email}
@@ -205,36 +198,36 @@ export function BuyerProfileDetailed({
         <div className="space-y-6">
           {/* Budget & Timeline */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="max-md:w-full">
               <CardHeader>
-                <CardTitle className="flex items-center text-lg">
+                <CardTitle className="flex items-center text-lg max-md:text-base">
                   <DollarSign className="h-5 w-5 mr-2 text-[#048A81]" />
                   Investment Budget
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-[#048A81] mb-2">
+                <div className="text-2xl font-bold text-[#048A81] mb-2 max-md:text-lg">
                   {formatCurrency(profile.budget.min)} -{" "}
                   {formatCurrency(profile.budget.max)}
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground max-md:text-xs">
                   Ready to deploy capital for the right opportunity
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="max-md:w-full">
               <CardHeader>
-                <CardTitle className="flex items-center text-lg">
+                <CardTitle className="flex items-center text-lg max-md:text-base">
                   <Clock className="h-5 w-5 mr-2 text-[#F95738]" />
                   Timeline & Urgency
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-[#F95738] mb-2">
+                <div className="text-2xl font-bold text-[#F95738] mb-2 max-md:text-lg">
                   {profile.timeline}
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground max-md:text-xs">
                   Actively looking to close a deal
                 </p>
               </CardContent>
@@ -242,25 +235,25 @@ export function BuyerProfileDetailed({
           </div>
 
           {/* Investment Thesis */}
-          <Card>
+          <Card className="max-md:w-full">
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center max-md:text-base">
                 <Target className="h-5 w-5 mr-2 text-[#0D3B66]" />
                 Investment Thesis
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-md:text-sm">
                 {extendedData.investmentThesis}
               </p>
             </CardContent>
           </Card>
 
           {/* Industries & Preferences */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-md:w-full">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center">
+                <CardTitle className="flex items-center max-md:text-base">
                   <Building className="h-5 w-5 mr-2 text-[#0D3B66]" />
                   Target Industries
                 </CardTitle>
@@ -268,7 +261,10 @@ export function BuyerProfileDetailed({
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {profile.industries.map((industry) => (
-                    <Badge key={industry} className="text-sm bg-[#048A81]">
+                    <Badge
+                      key={industry}
+                      className="text-sm bg-[#048A81] max-md:text-xs"
+                    >
                       {industry}
                     </Badge>
                   ))}
@@ -278,7 +274,7 @@ export function BuyerProfileDetailed({
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center">
+                <CardTitle className="flex items-center max-md:text-base">
                   <Heart className="h-5 w-5 mr-2 text-[#F95738]" />
                   Looking For
                 </CardTitle>
@@ -286,7 +282,11 @@ export function BuyerProfileDetailed({
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {profile.lookingFor.map((item) => (
-                    <Badge key={item} variant="outline" className="text-sm">
+                    <Badge
+                      key={item}
+                      variant="outline"
+                      className="text-sm max-md:text-xs"
+                    >
                       {item}
                     </Badge>
                   ))}
@@ -296,9 +296,9 @@ export function BuyerProfileDetailed({
           </div>
 
           {/* Portfolio Companies */}
-          <Card>
+          <Card className="max-md:w-full">
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center max-md:text-base">
                 <PieChart className="h-5 w-5 mr-2 text-[#048A81]" />
                 Portfolio Companies
               </CardTitle>
@@ -326,7 +326,7 @@ export function BuyerProfileDetailed({
           {/* Deal Preferences */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center max-md:text-base">
                 <Briefcase className="h-5 w-5 mr-2 text-[#F95738]" />
                 Deal Preferences
               </CardTitle>
@@ -334,7 +334,7 @@ export function BuyerProfileDetailed({
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold mb-2">
+                  <h4 className="font-semibold mb-2 max-md:text-base">
                     Preferred Deal Structure
                   </h4>
                   <div className="space-y-1">
@@ -347,7 +347,7 @@ export function BuyerProfileDetailed({
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Key Requirements</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
+                  <ul className="text-sm text-muted-foreground space-y- max-md:text-xs">
                     <li>
                       • Minimum Revenue:{" "}
                       {extendedData.dealPreferences.minimumRevenue}
@@ -373,40 +373,30 @@ export function BuyerProfileDetailed({
           <Separator />
 
           {/* Action Buttons */}
-          <div className="flex justify-between items-center">
+          <div className="flex space-x-3 max-md:flex-col max-md:items-center max-md:justify-center max-md:w-full max-md:gap-4 max-md:space-x-0">
             <Button
               variant="outline"
-              onClick={onClose}
-              className="cursor-pointer"
+              size="lg"
+              className="border-[#F95738] text-[#F95738] hover:bg-[#F95738] hover:text-white cursor-pointer"
+              onClick={() => {
+                onPass(profile.id);
+                onClose();
+              }}
             >
-              Close Profile
+              Pass on This Buyer
             </Button>
-
-            <div className="flex space-x-3">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-[#F95738] text-[#F95738] hover:bg-[#F95738] hover:text-white cursor-pointer"
-                onClick={() => {
-                  onPass(profile.id);
-                  onClose();
-                }}
-              >
-                Pass on This Buyer
-              </Button>
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-[#048A81] hover:text-[#048A81] hover:bg-white hover:border hover:border-[#048A81] cursor-pointer"
-                onClick={() => {
-                  onConnect(profile.id);
-                  onClose();
-                }}
-              >
-                <Heart className="h-5 w-5 mr-2" />
-                Connect Now
-              </Button>
-            </div>
+            <Button
+              variant="default"
+              size="lg"
+              className="bg-[#048A81] hover:text-[#048A81] hover:bg-white hover:border hover:border-[#048A81] cursor-pointer"
+              onClick={() => {
+                onConnect(profile.id);
+                onClose();
+              }}
+            >
+              <Heart className="h-5 w-5 mr-2" />
+              Connect Now
+            </Button>
           </div>
         </div>
       </DialogContent>

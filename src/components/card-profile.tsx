@@ -78,13 +78,17 @@ export function BuyerProfileCard({
         relative overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300
         ${isAnimating === "left" ? "animate-swipe-left" : ""}
         ${isAnimating === "right" ? "animate-swipe-right" : ""}
-        ${variant === "stack" ? "w-full max-w-4xl" : "w-4xl"}
+        ${
+          variant === "stack"
+            ? "w-full max-w-4xl max-lg:max-w-full"
+            : "w-4xl max-lg:max-w-full"
+        }
       `}
     >
-      <CardContent className="p-6 w-4xl">
+      <CardContent className="p-6 w-4xl max-lg:w-full">
         {/* Header */}
-        <div className="flex items-start justify-between gap-6 mb-4">
-          <div className="flex items-center space-x-3">
+        <div className="flex items-start justify-between gap-6 mb-4 max-lg:flex-col">
+          <div className="flex items-center space-x-3 max-lg:flex-col max-lg:space-x-0 max-lg:items-start max-lg:gap-2">
             <Avatar className="h-16 w-16">
               <AvatarImage src={profile.avatar} alt={profile.name} />
               <AvatarFallback className="bg-[#0D3B66] text-white text-lg">
