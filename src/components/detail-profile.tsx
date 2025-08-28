@@ -154,7 +154,7 @@ export function BuyerProfileDetailed({
 
               <div className="flex items-center space-x-4 mb-3">
                 <div className="flex items-center space-x-2">
-                  <Building className="h-5 w-5 text-primary" />
+                  <Building className="h-5 w-5 text-[#0D3B66]" />
                   <span className="text-lg font-semibold text-muted-foreground">
                     {profile.company}
                   </span>

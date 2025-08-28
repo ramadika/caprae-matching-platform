@@ -26,13 +26,13 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-[#F5F8FE] flex items-center justify-center p-6">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Progress Header */}
         <div className="bg-gradient-to-r from-[#048A81] to-[#F95738] p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-bold">Buyer Onboarding</h1>
-            <span className="text-emerald-100">
+            <span className="text-white">
               {onboardingStep} of {totalSteps}
             </span>
           </div>
@@ -51,10 +51,10 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center mb-8">
                   <TrendingUp className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-foreground mb-2">
                     Investment Profile
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Tell us about your investment criteria and experience
                   </p>
                 </div>
@@ -62,7 +62,7 @@ export default function Index() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Full Name
                       </label>
                       <input
@@ -73,7 +73,7 @@ export default function Index() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Company/Fund
                       </label>
                       <input
@@ -86,10 +86,10 @@ export default function Index() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Investment Budget
                       </label>
-                      <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
                         <option>Select Budget Range</option>
                         <option>$500K - $1M</option>
                         <option>$1M - $3M</option>
@@ -100,10 +100,10 @@ export default function Index() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Investment Experience
                       </label>
-                      <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
                         <option>First-time buyer</option>
                         <option>2-5 acquisitions</option>
                         <option>6-10 acquisitions</option>
@@ -113,7 +113,7 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Target Industries
                     </label>
                     <div className="grid grid-cols-2 gap-2">
@@ -148,10 +148,10 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center mb-8">
                   <MapPin className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-foreground mb-2">
                     Deal Preferences
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Define your ideal acquisition criteria
                   </p>
                 </div>
@@ -159,10 +159,10 @@ export default function Index() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Preferred Revenue Range
                       </label>
-                      <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
                         <option>Any Revenue Size</option>
                         <option>Under $500K</option>
                         <option>$500K - $1M</option>
@@ -172,10 +172,10 @@ export default function Index() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Geographic Focus
                       </label>
-                      <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
                         <option>No Preference</option>
                         <option>West Coast</option>
                         <option>East Coast</option>
@@ -187,7 +187,7 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Deal Type Preference
                     </label>
                     <div className="space-y-2">
@@ -197,7 +197,9 @@ export default function Index() {
                           name="dealType"
                           className="text-[#F95738] focus:ring-orange-500"
                         />
-                        <span>Majority Acquisition (51%+)</span>
+                        <span className="text-sm">
+                          Majority Acquisition (51%+)
+                        </span>
                       </label>
                       <label className="flex items-center space-x-2">
                         <input
@@ -205,7 +207,7 @@ export default function Index() {
                           name="dealType"
                           className="text-[#F95738] focus:ring-orange-500"
                         />
-                        <span>Full Acquisition (100%)</span>
+                        <span className="text-sm">Full Acquisition (100%)</span>
                       </label>
                       <label className="flex items-center space-x-2">
                         <input
@@ -213,16 +215,16 @@ export default function Index() {
                           name="dealType"
                           className="text-[#F95738] focus:ring-orange-500"
                         />
-                        <span>Minority Investment</span>
+                        <span className="text-sm">Minority Investment</span>
                       </label>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Investment Timeline
                     </label>
-                    <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
                       <option>Immediately</option>
                       <option>Within 3 months</option>
                       <option>Within 6 months</option>
@@ -237,17 +239,17 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center mb-8">
                   <CheckCircle className="w-16 h-16 text-[#F95738] mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-foreground mb-2">
                     Verification & Credentials
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Complete your investor profile to access premium listings
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Investment Thesis
                     </label>
                     <textarea
@@ -258,15 +260,15 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Financial Verification
                     </label>
                     <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-orange-500 transition-colors">
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-sm text-gray-600">
+                      <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">
                         Upload proof of funds or bank statement
                       </p>
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-muted-foreground mt-1">
                         Required to access seller information
                       </p>
                     </div>
@@ -274,7 +276,7 @@ export default function Index() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         LinkedIn Profile
                       </label>
                       <input
@@ -285,7 +287,7 @@ export default function Index() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Website/Portfolio
                       </label>
                       <input
@@ -296,14 +298,14 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <div className="bg-amber-50 p-4 rounded-lg">
+                  <div className="bg-[#F4D35E] p-4 rounded-lg">
                     <div className="flex items-start space-x-3">
-                      <Award className="w-5 h-5 text-amber-600 mt-0.5" />
+                      <Award className="w-5 h-5 text-[#F95738] mt-0.5" />
                       <div>
-                        <p className="text-sm font-medium text-amber-900">
+                        <p className="text-sm font-medium text-[#F95738]">
                           Verification Process
                         </p>
-                        <p className="text-xs text-amber-700 mt-1">
+                        <p className="text-xs text-[#F95738] mt-1">
                           We'll verify your identity, financial capacity, and
                           investment experience within 24-48 hours.
                         </p>
@@ -319,14 +321,14 @@ export default function Index() {
           <div className="flex items-center justify-between pt-8">
             <button
               onClick={prevStep}
-              className="px-6 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
+              className="px-6 py-2 text-muted-foreground border border-muted-foreground rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
             >
               {onboardingStep === 1 ? "Back to Home" : "Previous"}
             </button>
 
             <button
               onClick={nextStep}
-              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#F95738] hover:bg-orange-700 cursor-pointer"
+              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#F95738] hover:bg-white hover:border hover:border-[#F95738] hover:text-[#F95738] cursor-pointer"
             >
               {onboardingStep === totalSteps ? "Complete Setup" : "Continue"}
             </button>

@@ -11,21 +11,21 @@ import { NavLink } from "react-router";
 
 export default function Index() {
   return (
-    <div className="h-screen bg-gradient-to-br from-[#048A81] via-white to-red-50">
+    <div className="h-screen bg-[#F5F8FE]">
       <div className="w-full flex flex-col justify-center items-center h-screen px-6 py-20 text-center font-inter">
         <div className="flex justify-center mb-8">
           <div className="w-16 h-16 bg-[#048A81] rounded-2xl flex items-center justify-center shadow-elevated">
             <Building className="h-8 w-8 text-white" />
           </div>
         </div>
-        <h1 className="text-5xl md:text-6xl text-gray-900 mb-6 font-bold animate-slide-in font-raleway">
+        <h1 className="text-5xl md:text-6xl text-foreground mb-6 font-bold animate-slide-in font-raleway">
           Where Great Businesses
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048A81] to-[#F95738]">
             &nbsp;Find Perfect Matches
           </span>
         </h1>
-        <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-base text-muted-foreground mb-12 max-w-2xl mx-auto">
           The modern platform that puts sellers in control. Connect with
           verified buyers, streamline due diligence, and close deals faster with
           AI-powered tools.
@@ -50,7 +50,7 @@ export default function Index() {
           </NavLink>
         </div>
 
-        <div className="flex items-center justify-center space-x-8 text-gray-500 mb-16">
+        <div className="flex items-center justify-center space-x-8 text-muted-foreground mb-16">
           <div className="flex items-center space-x-2">
             <Shield className="w-5 h-5" />
             <span>Bank-grade Security</span>

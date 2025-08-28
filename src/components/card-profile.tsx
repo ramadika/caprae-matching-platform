@@ -7,7 +7,7 @@ import {
   MapPin,
   Building,
   DollarSign,
-  Calendar,
+  // Calendar,
   CheckCircle,
   X,
   Heart,
@@ -78,12 +78,12 @@ export function BuyerProfileCard({
         relative overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300
         ${isAnimating === "left" ? "animate-swipe-left" : ""}
         ${isAnimating === "right" ? "animate-swipe-right" : ""}
-        ${variant === "stack" ? "w-full max-w-sm" : "w-full"}
+        ${variant === "stack" ? "w-full max-w-4xl" : "w-4xl"}
       `}
     >
-      <CardContent className="p-6">
+      <CardContent className="p-6 w-4xl">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex items-start justify-between gap-6 mb-4">
           <div className="flex items-center space-x-3">
             <Avatar className="h-16 w-16">
               <AvatarImage src={profile.avatar} alt={profile.name} />
@@ -100,7 +100,7 @@ export function BuyerProfileCard({
                   {profile.name}
                 </h3>
                 {profile.verified && (
-                  <CheckCircle className="h-5 w-5 text-success" />
+                  <CheckCircle className="h-5 w-5 text-[#048A81]" />
                 )}
               </div>
               <p className="text-muted-foreground font-medium">
@@ -117,16 +117,17 @@ export function BuyerProfileCard({
             variant="ghost"
             size="sm"
             onClick={() => onViewProfile(profile.id)}
-            className="shrink-0 cursor-pointer"
+            className="shrink-0 cursor-pointer bg-[#F95738] text-white"
           >
-            <Eye className="h-4 w-4 text-[#F95738]" />
+            View Profile
+            <Eye className="h-4 w-4" />
           </Button>
         </div>
 
         {/* Stats */}
         <div className="flex items-center space-x-4 mb-4">
           <div className="flex items-center space-x-1">
-            <Star className="h-4 w-4 text-warning fill-current" />
+            <Star className="h-4 w-4 text-[#F4D35E] fill-current" />
             <span className="text-sm font-medium">{profile.rating}</span>
           </div>
           <div className="text-sm text-muted-foreground">
@@ -149,7 +150,7 @@ export function BuyerProfileCard({
         {/* Industries */}
         <div className="mb-4">
           <div className="flex items-center space-x-2 mb-2">
-            <Building className="h-4 w-4 text-primary" />
+            <Building className="h-4 w-4 text-[#0D3B66]" />
             <span className="font-medium">Target Industries</span>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -167,16 +168,16 @@ export function BuyerProfileCard({
         </div>
 
         {/* Timeline */}
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <div className="flex items-center space-x-2 mb-1">
             <Calendar className="h-4 w-4 text-[#F95738]" />
             <span className="font-medium">Timeline</span>
           </div>
           <p className="text-muted-foreground">{profile.timeline}</p>
-        </div>
+        </div> */}
 
         {/* Bio */}
-        <div className="mb-6">
+        <div className="mb-4">
           <p className="text-sm text-muted-foreground line-clamp-3">
             {profile.bio}
           </p>

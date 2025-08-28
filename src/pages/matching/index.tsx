@@ -141,12 +141,12 @@ export default function MatchingInterface() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-subtle">
+      <div className="min-h-screen bg-[#F5F8FE]">
         <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} />
         <div className="flex items-center justify-center min-h-[80vh]">
           <Card className="p-8 text-center shadow-elevated">
             <CardContent>
-              <RefreshCw className="h-12 w-12 text-primary mx-auto mb-4 animate-spin" />
+              <RefreshCw className="h-12 w-12 text-[#0D3B66] mx-auto mb-4 animate-spin" />
               <h3 className="text-xl font-semibold mb-2">
                 Finding More Buyers...
               </h3>
@@ -162,12 +162,12 @@ export default function MatchingInterface() {
 
   if (!currentProfile) {
     return (
-      <div className="min-h-screen bg-gradient-subtle">
+      <div className="min-h-screen bg-[#F5F8FE]">
         <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} />
         <div className="flex items-center justify-center min-h-[80vh]">
           <Card className="p-8 text-center shadow-elevated">
             <CardContent>
-              <Sparkles className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Sparkles className="h-12 w-12 text-[#0D3B66] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">All Caught Up!</h3>
               <p className="text-muted-foreground mb-4">
                 You've reviewed all available buyer profiles. We'll notify you
@@ -187,9 +187,21 @@ export default function MatchingInterface() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-[#F5F8FE]">
       {/* <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} /> */}
       <div className="max-w-7xl mx-auto px-4 py-8">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+            className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#048A81] to-[#F95738] opacity-30 sm:left-[calc(50%-40rem)] sm:w-288.75"
+          />
+        </div>
         <Button
           className="bg-transparent text-[#0D3B66] border border-[#0D3B66] mb-4 cursor-pointer hover:text-white hover:bg-[#0D3B66]"
           onClick={() => navigate(-1)}
@@ -197,20 +209,20 @@ export default function MatchingInterface() {
           &#8592;&nbsp;Back to Dashboard
         </Button>
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-center text-center mb-12">
           <div>
-            <h1 className="text-3xl font-bold text-foreground mb-2">
-              Discover Qualified Buyers
+            <h1 className="text-xl font-bold text-foreground mb-1">
+              Discover Qualified Profiles
             </h1>
-            <p className="text-muted-foreground">
-              Review buyer profiles and connect with those interested in your
-              business type
+            <p className="text-muted-foreground text-sm">
+              Review profiles and connect with those interested in your business
+              type
             </p>
           </div>
         </div>
 
         {/* Stats Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <Card className="shadow-card">
             <CardContent className="text-center">
               <div className="text-2xl font-bold text-[#0D3B66]">
@@ -239,11 +251,11 @@ export default function MatchingInterface() {
               <div className="text-sm">Avg Budget</div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
 
         {/* Main Matching Interface */}
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-4">
             <div className="relative">
               <BuyerProfileCard
                 profile={currentProfile}
@@ -263,7 +275,7 @@ export default function MatchingInterface() {
           </div>
 
           {/* Swipe Indicators */}
-          <div className="flex justify-center items-center space-x-8 mb-8">
+          <div className="flex justify-center items-center space-x-8 ">
             <div className="flex flex-col items-center space-y-2">
               <Button
                 variant="outline"
@@ -282,7 +294,7 @@ export default function MatchingInterface() {
               </div>
               <div className="w-32 h-1 bg-muted rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-primary transition-all duration-300"
+                  className="h-full bg-[#048A81] transition-all duration-300"
                   style={{
                     width: `${
                       ((currentProfileIndex + 1) / profiles.length) * 100
@@ -306,7 +318,7 @@ export default function MatchingInterface() {
           </div>
 
           {/* Keyboard Shortcuts */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <p className="text-sm text-muted-foreground mb-2">
               Keyboard shortcuts:
             </p>
@@ -321,7 +333,7 @@ export default function MatchingInterface() {
                 <kbd className="px-2 py-1 bg-muted rounded">↑</kbd> View Profile
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Detailed Profile Modal */}
         <BuyerProfileDetailed

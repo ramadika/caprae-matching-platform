@@ -55,14 +55,15 @@ export function Navigation({ userRole, userInfo }: NavigationProps) {
   ];
 
   return (
-    <nav className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <nav className="border-b bg-muted/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1 border bg-[#048A81] text-white rounded-2xl px-4 py-0.5 shadow-2xl">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Building className="h-5 w-5" />
-            </div>
+          <Link
+            to="/"
+            className="flex items-center space-x-1 border bg-[#048A81] text-white rounded-2xl px-4 py-1 shadow-2xl"
+          >
+            <Building className="h-5 w-5" />
             <span className="text-base font-bold text-shadow-md">BizMatch</span>
           </Link>
 

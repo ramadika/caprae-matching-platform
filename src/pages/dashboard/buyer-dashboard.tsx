@@ -96,7 +96,7 @@ export default function BuyerDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-[#F5F8FE]">
       <Navigation
         userRole="buyer"
         userInfo={{ name: "Michael Chen", avatar: "" }}
@@ -214,7 +214,7 @@ export default function BuyerDashboard() {
                             </Badge>
                           )}
                           <div className="flex items-center space-x-1">
-                            <Star className="h-3 w-3 text-warning fill-current" />
+                            <Star className="h-3 w-3 text-[#F4D35E] fill-current" />
                             <span className="text-xs text-[#048A81]">
                               {business.match}% match
                             </span>
@@ -227,19 +227,19 @@ export default function BuyerDashboard() {
                         <div className="flex items-center space-x-6 text-sm">
                           <div>
                             <span className="text-[#048A81]">Revenue: </span>
-                            <span className="font-medium text-success">
+                            <span className="font-medium text-foreground">
                               {business.revenue}
                             </span>
                           </div>
                           <div>
                             <span className="text-[#048A81]">Asking: </span>
-                            <span className="font-medium text-primary">
+                            <span className="font-medium text-foreground">
                               {business.askingPrice}
                             </span>
                           </div>
                           <div>
                             <span className="text-[#048A81]">Seller: </span>
-                            <span className="font-medium">
+                            <span className="font-medium text-foreground">
                               {business.seller}
                             </span>
                           </div>
@@ -278,11 +278,11 @@ export default function BuyerDashboard() {
             </Card>
 
             {/* Market Insights */}
-            <Card className="shadow-card border-primary/20">
+            <Card className="shadow-card">
               <CardHeader>
                 <div className="flex items-center space-x-2">
-                  <TrendingUp className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-primary">
+                  <TrendingUp className="h-5 w-5 text-[#0D3B66]" />
+                  <CardTitle className="text-foreground">
                     Market Insights
                   </CardTitle>
                 </div>
@@ -291,11 +291,11 @@ export default function BuyerDashboard() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                <div className="p-4">
                   <h4 className="font-semibold text-[#0D3B66] mb-2">
                     SaaS Market Trends
                   </h4>
-                  <p className="text-sm text-[#048A81] mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     SaaS businesses in your budget range are seeing 23% higher
                     valuations than last quarter. Consider making competitive
                     offers on quality targets.
@@ -304,11 +304,11 @@ export default function BuyerDashboard() {
                     View Full Report
                   </Button>
                 </div>
-                <div className="p-4 bg-secondary/5 rounded-lg border border-secondary/20">
+                <div className="p-4">
                   <h4 className="font-semibold text-[#0D3B66] mb-2">
                     Deal Competition
                   </h4>
-                  <p className="text-sm text-[#048A81] mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     3 other buyers are targeting similar businesses in your
                     area. Fast decision-making could give you a competitive
                     advantage.
@@ -344,7 +344,7 @@ export default function BuyerDashboard() {
                           : notification.type === "business"
                           ? "bg-[#0D3B66]"
                           : notification.type === "offer"
-                          ? "bg-destructive"
+                          ? "bg-[#F95738]"
                           : "bg-[#F4D35E]"
                       }`}
                     ></div>
@@ -373,20 +373,29 @@ export default function BuyerDashboard() {
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="text-sm font-medium mb-2">Budget Range</h4>
-                  <p className="text-lg font-bold text-success">$2M - $5M</p>
+                  <p className="text-lg font-bold text-[#048A81]">$2M - $5M</p>
                 </div>
                 <div>
                   <h4 className="text-sm font-medium mb-2">
                     Target Industries
                   </h4>
                   <div className="flex flex-wrap gap-1">
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs bg-[#048A81] text-white"
+                    >
                       Technology
                     </Badge>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs bg-[#048A81] text-white"
+                    >
                       SaaS
                     </Badge>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs bg-[#048A81] text-white"
+                    >
                       E-commerce
                     </Badge>
                   </div>

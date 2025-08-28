@@ -64,7 +64,7 @@ export default function SellerDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-[#F5F8FE]">
       <Navigation
         userRole="seller"
         userInfo={{ name: "Jane Doe", avatar: "" }}
@@ -95,7 +95,9 @@ export default function SellerDashboard() {
                 </div>
                 <Eye className="h-8 w-8 text-[#F95738]" />
               </div>
-              <p className="text-xs text-success mt-2">+15% from last week</p>
+              <p className="text-xs text-muted-foreground mt-2">
+                +15% from last week
+              </p>
             </CardContent>
           </Card>
 
@@ -110,7 +112,9 @@ export default function SellerDashboard() {
                 </div>
                 <Heart className="h-8 w-8 text-[#F95738]" />
               </div>
-              <p className="text-xs text-success mt-2">+8 new this week</p>
+              <p className="text-xs text-muted-foreground mt-2">
+                +8 new this week
+              </p>
             </CardContent>
           </Card>
 
@@ -125,7 +129,7 @@ export default function SellerDashboard() {
                 </div>
                 <MessageCircle className="h-8 w-8 text-[#F95738]" />
               </div>
-              <p className="text-xs text-[#048A81] mt-2">
+              <p className="text-xs text-muted-foreground mt-2">
                 3 need your response
               </p>
             </CardContent>
@@ -142,7 +146,7 @@ export default function SellerDashboard() {
                 </div>
                 <TrendingUp className="h-8 w-8 text-[#F95738]" />
               </div>
-              <p className="text-xs text-success mt-2">
+              <p className="text-xs text-muted-foreground mt-2">
                 +{stats.growth}% growth
               </p>
             </CardContent>
@@ -196,7 +200,7 @@ export default function SellerDashboard() {
                             {match.budget}
                           </Badge>
                           <div className="flex items-center space-x-1">
-                            <Star className="h-3 w-3 text-warning fill-current" />
+                            <Star className="h-3 w-3 text-[#F4D35E] fill-current" />
                             <span className="text-xs text-[#048A81]">
                               {match.match}% match
                             </span>
@@ -228,8 +232,8 @@ export default function SellerDashboard() {
             <Card className="shadow-card border-primary/20">
               <CardHeader>
                 <div className="flex items-center space-x-2">
-                  <Brain className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-primary">
+                  <Brain className="h-5 w-5 text-[#0D3B66]" />
+                  <CardTitle className="text-foreground">
                     AI Business Insights
                   </CardTitle>
                 </div>
@@ -238,11 +242,11 @@ export default function SellerDashboard() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                <div className="p-4">
                   <h4 className="font-semibold text-[#0D3B66] mb-2">
                     Optimize Your Asking Price
                   </h4>
-                  <p className="text-sm text-[#048A81] mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Based on similar SaaS businesses, your asking price could be
                     15% higher given your growth metrics.
                   </p>
@@ -250,11 +254,11 @@ export default function SellerDashboard() {
                     View Analysis
                   </Button>
                 </div>
-                <div className="p-4 bg-secondary/5 rounded-lg border border-secondary/20">
+                <div className="p-4">
                   <h4 className="font-semibold text-[#0D3B66] mb-2">
                     Profile Enhancement
                   </h4>
-                  <p className="text-sm text-[#048A81] mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Add customer testimonials to increase buyer confidence by an
                     estimated 23%.
                   </p>

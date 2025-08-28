@@ -149,7 +149,7 @@ export default function DealsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-[#F5F8FE]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Button
           className="bg-transparent text-[#0D3B66] border border-[#0D3B66] mb-4 cursor-pointer hover:text-white hover:bg-[#0D3B66]"
@@ -369,7 +369,7 @@ export default function DealsPage() {
                       className="bg-[#0D3B66] cursor-pointer"
                     >
                       <MessageCircle className="h-4 w-4 mr-2" />
-                      Message Buyer
+                      Send Message
                     </Button>
                     <Button
                       variant="outline"
