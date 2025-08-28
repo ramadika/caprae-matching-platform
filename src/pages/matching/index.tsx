@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Navigation } from "@/components/navigation";
@@ -107,6 +106,7 @@ export default function MatchingInterface() {
   const handleLike = (profileId: string) => {
     setMatches((prev) => [...prev, profileId]);
     moveToNext();
+    console.log("matches", matches);
   };
 
   const handlePass = (profileId: string) => {
