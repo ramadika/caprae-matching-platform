@@ -54,7 +54,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Investment Profile
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground max-md:text-sm">
                     Tell us about your investment criteria and experience
                   </p>
                 </div>
@@ -68,7 +68,7 @@ export default function Index() {
                       <input
                         type="text"
                         placeholder="John Smith"
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm"
                       />
                     </div>
 
@@ -79,7 +79,7 @@ export default function Index() {
                       <input
                         type="text"
                         placeholder="Growth Capital Partners"
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm"
                       />
                     </div>
                   </div>
@@ -89,7 +89,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Investment Budget
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm">
                         <option>Select Budget Range</option>
                         <option>$500K - $1M</option>
                         <option>$1M - $3M</option>
@@ -103,7 +103,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Investment Experience
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm">
                         <option>First-time buyer</option>
                         <option>2-5 acquisitions</option>
                         <option>6-10 acquisitions</option>
@@ -133,7 +133,7 @@ export default function Index() {
                         >
                           <input
                             type="checkbox"
-                            className="rounded border-gray-300 text-[#F95738] focus:ring-orange-500"
+                            className="rounded border-gray-300 text-[#F95738] focus:ring-[#F95738]"
                           />
                           <span className="text-sm">{industry}</span>
                         </label>
@@ -151,7 +151,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Deal Preferences
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground max-md:text-sm">
                     Define your ideal acquisition criteria
                   </p>
                 </div>
@@ -162,7 +162,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Preferred Revenue Range
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm">
                         <option>Any Revenue Size</option>
                         <option>Under $500K</option>
                         <option>$500K - $1M</option>
@@ -175,7 +175,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Geographic Focus
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm">
                         <option>No Preference</option>
                         <option>West Coast</option>
                         <option>East Coast</option>
@@ -195,7 +195,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-[#F95738] focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-[#F95738] max-md:text-sm"
                         />
                         <span className="text-sm">
                           Majority Acquisition (51%+)
@@ -205,7 +205,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-[#F95738] focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-[#F95738] max-md:text-sm"
                         />
                         <span className="text-sm">Full Acquisition (100%)</span>
                       </label>
@@ -213,7 +213,7 @@ export default function Index() {
                         <input
                           type="radio"
                           name="dealType"
-                          className="text-[#F95738] focus:ring-orange-500"
+                          className="text-[#F95738] focus:ring-[#F95738] max-md:text-sm"
                         />
                         <span className="text-sm">Minority Investment</span>
                       </label>
@@ -224,7 +224,7 @@ export default function Index() {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Investment Timeline
                     </label>
-                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-orange-500">
+                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm">
                       <option>Immediately</option>
                       <option>Within 3 months</option>
                       <option>Within 6 months</option>
@@ -242,7 +242,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Verification & Credentials
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground max-md:text-sm">
                     Complete your investor profile to access premium listings
                   </p>
                 </div>
@@ -255,7 +255,7 @@ export default function Index() {
                     <textarea
                       rows={4}
                       placeholder="Describe your investment approach, what you look for in businesses, and how you add value..."
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm"
                     ></textarea>
                   </div>
 
@@ -263,9 +263,9 @@ export default function Index() {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Financial Verification
                     </label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-orange-500 transition-colors">
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#F95738] transition-colors">
                       <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground max-md:text-sm">
                         Upload proof of funds or bank statement
                       </p>
                       <p className="text-xs text-muted-foreground mt-1">
@@ -282,7 +282,7 @@ export default function Index() {
                       <input
                         type="url"
                         placeholder="https://linkedin.com/in/yourprofile"
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm"
                       />
                     </div>
 
@@ -293,7 +293,7 @@ export default function Index() {
                       <input
                         type="url"
                         placeholder="https://yourcompany.com"
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F95738] max-md:text-sm"
                       />
                     </div>
                   </div>
@@ -318,7 +318,7 @@ export default function Index() {
           </>
 
           {/* Navigation Buttons */}
-          <div className="flex items-center justify-between pt-8">
+          <div className="flex items-center justify-between pt-8 max-md:text-xs">
             <button
               onClick={prevStep}
               className="px-6 py-2 text-muted-foreground border border-muted-foreground rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
@@ -328,7 +328,7 @@ export default function Index() {
 
             <button
               onClick={nextStep}
-              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#F95738] hover:bg-white hover:border hover:border-[#F95738] hover:text-[#F95738] cursor-pointer"
+              className="px-6 py-2 text-white rounded-lg font-medium transition-colors border border-[#F95738] bg-[#F95738] hover:bg-white hover:border hover:border-[#F95738] hover:text-[#F95738] cursor-pointer"
             >
               {onboardingStep === totalSteps ? "Complete Setup" : "Continue"}
             </button>

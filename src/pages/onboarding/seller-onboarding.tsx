@@ -61,7 +61,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Tell us about your business
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground max-md:text-sm">
                     Help us understand what makes your business unique
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="Acme Software Solutions"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] focus:border-transparent max-md:text-sm"
                     />
                   </div>
 
@@ -83,7 +83,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Industry
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-emerald-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm">
                         <option>Select Industry</option>
                         <option>Technology/Software</option>
                         <option>Healthcare</option>
@@ -97,7 +97,7 @@ export default function Index() {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Revenue Range
                       </label>
-                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-emerald-500">
+                      <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm">
                         <option>Select Range</option>
                         <option>Under $500K</option>
                         <option>$500K - $1M</option>
@@ -115,7 +115,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="San Francisco, CA"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] focus:border-transparent max-md:text-sm"
                     />
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="$2,500,000"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm"
                     />
                   </div>
 
@@ -153,7 +153,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="$750,000"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm"
                     />
                   </div>
 
@@ -164,7 +164,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="25%"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm"
                     />
                   </div>
 
@@ -175,7 +175,7 @@ export default function Index() {
                     <input
                       type="text"
                       placeholder="35"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm"
                     />
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function Index() {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Expected Valuation Range
                   </label>
-                  <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-emerald-500">
+                  <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm">
                     <option>Select Range</option>
                     <option>$1M - $3M</option>
                     <option>$3M - $5M</option>
@@ -202,7 +202,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Deal Preferences
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground max-md:text-sm">
                     Help us find the right buyers for your business
                   </p>
                 </div>
@@ -216,7 +216,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-[#048A81] max-md:text-sm"
                         />
                         <span className="text-sm">
                           Strategic Buyer (Competitor/Industry Player)
@@ -225,7 +225,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-[#048A81] max-md:text-sm"
                         />
                         <span className="text-sm">
                           Financial Buyer (Private Equity/Investment Firm)
@@ -234,7 +234,7 @@ export default function Index() {
                       <label className="flex items-center space-x-2">
                         <input
                           type="checkbox"
-                          className="rounded border-gray-300 text-[#048A81] focus:ring-emerald-500"
+                          className="rounded border-gray-300 text-[#048A81] focus:ring-[#048A81]"
                         />
                         <span className="text-sm">
                           Individual Investor/Entrepreneur
@@ -247,7 +247,7 @@ export default function Index() {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Timeline to Sell
                     </label>
-                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-emerald-500">
+                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm">
                       <option>Select Timeline</option>
                       <option>Within 3 months</option>
                       <option>3-6 months</option>
@@ -260,7 +260,7 @@ export default function Index() {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Deal Structure Preference
                     </label>
-                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-emerald-500">
+                    <select className="w-full p-3 border border-gray-300 text-muted-foreground rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm">
                       <option>Asset Sale</option>
                       <option>Stock Sale</option>
                       <option>Merger</option>
@@ -291,7 +291,7 @@ export default function Index() {
                     <textarea
                       rows={4}
                       placeholder="Describe what makes your business unique, key competitive advantages, and growth opportunities..."
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#048A81] max-md:text-sm"
                     ></textarea>
                   </div>
 
@@ -299,9 +299,9 @@ export default function Index() {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Upload Business Documents
                     </label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-500 transition-colors">
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#048A81] transition-colors">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 max-md:text-sm">
                         Drag & drop files or click to browse
                       </p>
                       <p className="text-xs text-gray-500 mt-1">
@@ -330,7 +330,7 @@ export default function Index() {
           </>
 
           {/* Navigation Buttons */}
-          <div className="flex items-center justify-between pt-8">
+          <div className="flex items-center justify-between pt-8 max-md:text-xs">
             <button
               onClick={prevStep}
               className="px-6 py-2 text-muted-foreground border border-muted-foreground rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
@@ -340,7 +340,7 @@ export default function Index() {
 
             <button
               onClick={nextStep}
-              className="px-6 py-2 text-white rounded-lg font-medium transition-colors bg-[#048A81] hover:bg-white hover:border hover:border-[#048A81] hover:text-[#048A81] cursor-pointer"
+              className="px-6 py-2 text-white rounded-lg border border-[#048A81] font-medium transition-colors bg-[#048A81] hover:bg-white hover:border hover:border-[#048A81] hover:text-[#048A81] cursor-pointer"
             >
               {onboardingStep === totalSteps ? "Complete Setup" : "Continue"}
             </button>
