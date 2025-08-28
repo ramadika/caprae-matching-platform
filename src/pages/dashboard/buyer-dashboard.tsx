@@ -20,6 +20,7 @@ import {
   Filter,
   Bell,
 } from "lucide-react";
+import { NavLink } from "react-router";
 
 export default function BuyerDashboard() {
   const [stats] = useState({
@@ -173,6 +174,28 @@ export default function BuyerDashboard() {
                 <TrendingUp className="h-8 w-8 text-[#F95738]" />
               </div>
               <p className="text-xs mt-2">Ready to deploy</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mb-8">
+          <Card className="shadow-card">
+            <CardContent className="flex flex-col items-center justify-center w-full text-center gap-4">
+              <div>
+                <h1 className="text-xl font-bold text-foreground mb-1">
+                  Discover Qualified Profiles
+                </h1>
+                <p className="text-muted-foreground text-sm">
+                  Review profiles and connect with those interested in your
+                  business type
+                </p>
+              </div>
+              <Button className="w-8/12 font-semibold tracking-wide text-lg py-2 border bg-[#F95738] hover:border-[#F95738] hover:bg-white hover:text-[#F95738]">
+                <NavLink to="/discover" className="flex items-center gap-2">
+                  <Eye />
+                  Start Matching
+                </NavLink>
+              </Button>
             </CardContent>
           </Card>
         </div>
