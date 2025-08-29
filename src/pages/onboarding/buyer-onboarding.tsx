@@ -1,29 +1,8 @@
-import { useState } from "react";
+import { useBuyerOnboard } from "@/hooks/useBuyerOnboard";
 import { TrendingUp, MapPin, CheckCircle, Upload, Award } from "lucide-react";
-import { useNavigate } from "react-router";
 
 export default function Index() {
-  const [onboardingStep, setOnboardingStep] = useState(1);
-  const navigate = useNavigate();
-
-  const totalSteps = 3;
-
-  const nextStep = () => {
-    if (onboardingStep < totalSteps) {
-      setOnboardingStep(onboardingStep + 1);
-    } else {
-      navigate("/dashboard/buyer");
-      setOnboardingStep(1);
-    }
-  };
-
-  const prevStep = () => {
-    if (onboardingStep > 1) {
-      setOnboardingStep(onboardingStep - 1);
-    } else {
-      navigate("/");
-    }
-  };
+  const { onboardingStep, totalSteps, nextStep, prevStep } = useBuyerOnboard();
 
   return (
     <div className="min-h-screen bg-[#F5F8FE] flex items-center justify-center p-6">

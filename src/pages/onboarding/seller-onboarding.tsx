@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useSellerOnboard } from "@/hooks/useSellerOnboard";
 import {
   Building2,
   DollarSign,
@@ -7,30 +7,9 @@ import {
   Upload,
   Shield,
 } from "lucide-react";
-import { useNavigate } from "react-router";
 
 export default function Index() {
-  const [onboardingStep, setOnboardingStep] = useState(1);
-  const navigate = useNavigate();
-
-  const totalSteps = 4;
-
-  const nextStep = () => {
-    if (onboardingStep < totalSteps) {
-      setOnboardingStep(onboardingStep + 1);
-    } else {
-      navigate("/dashboard/seller");
-      setOnboardingStep(1);
-    }
-  };
-
-  const prevStep = () => {
-    if (onboardingStep > 1) {
-      setOnboardingStep(onboardingStep - 1);
-    } else {
-      navigate("/");
-    }
-  };
+  const { onboardingStep, totalSteps, nextStep, prevStep } = useSellerOnboard();
 
   return (
     <div className="min-h-screen bg-[#F5F8FE] flex items-center justify-center p-6 font-lato">

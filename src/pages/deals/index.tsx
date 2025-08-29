@@ -1,5 +1,5 @@
-import { useState } from "react";
-// import { useNavigate } from "react-router";
+import { useDeals } from "@/hooks/useDeals";
+import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,113 +24,10 @@ import {
   Upload,
   TrendingUp,
 } from "lucide-react";
-import { Navigation } from "@/components/navigation";
+import { stageColors, stageLabels } from "@/utils/constants";
 
-interface Deal {
-  id: string;
-  buyerName: string;
-  buyerCompany: string;
-  buyerAvatar?: string;
-  businessName: string;
-  offerAmount: number;
-  stage: "initial" | "diligence" | "negotiation" | "closing" | "completed";
-  progress: number;
-  lastActivity: string;
-  nextAction: string;
-  documents: {
-    uploaded: number;
-    required: number;
-  };
-  aiInsights: string[];
-}
-
-const mockDeals: Deal[] = [
-  {
-    id: "1",
-    buyerName: "Michael Chen",
-    buyerCompany: "Growth Ventures LLC",
-    buyerAvatar: "",
-    businessName: "TechFlow SaaS",
-    offerAmount: 3200000,
-    stage: "diligence",
-    progress: 65,
-    lastActivity: "2 hours ago",
-    nextAction: "Review financial projections",
-    documents: { uploaded: 12, required: 18 },
-    aiInsights: [
-      "Buyer's financing is pre-approved",
-      "Timeline is on track for 90-day close",
-      "Consider highlighting customer retention metrics",
-    ],
-  },
-  {
-    id: "2",
-    buyerName: "Sarah Johnson",
-    buyerCompany: "Strategic Acquisitions Inc",
-    buyerAvatar: "",
-    businessName: "TechFlow SaaS",
-    offerAmount: 2850000,
-    stage: "negotiation",
-    progress: 45,
-    lastActivity: "1 day ago",
-    nextAction: "Respond to price adjustment request",
-    documents: { uploaded: 8, required: 18 },
-    aiInsights: [
-      "Buyer requested 10% price reduction",
-      "Consider counter-offer with earnout structure",
-      "Similar deals in your industry closed at higher multiples",
-    ],
-  },
-  {
-    id: "3",
-    buyerName: "David Rodriguez",
-    buyerCompany: "Rodriguez Family Office",
-    buyerAvatar: "",
-    businessName: "TechFlow SaaS",
-    offerAmount: 3450000,
-    stage: "initial",
-    progress: 15,
-    lastActivity: "3 days ago",
-    nextAction: "Schedule initial meeting",
-    documents: { uploaded: 3, required: 18 },
-    aiInsights: [
-      "High-quality buyer with strong financial backing",
-      "Previous deals show fast decision-making",
-      "Consider prioritizing this opportunity",
-    ],
-  },
-];
-
-const stageColors = {
-  initial: "bg-[#0D3B66]",
-  diligence: "bg-[#F4D35E]",
-  negotiation: "bg-[#F95738]",
-  closing: "bg-[#048A81]",
-  completed: "bg-[#048A81]",
-};
-
-const stageLabels = {
-  initial: "Initial Interest",
-  diligence: "Due Diligence",
-  negotiation: "Negotiation",
-  closing: "Closing",
-  completed: "Completed",
-};
-
-export default function DealsPage() {
-  const [activeTab, setActiveTab] = useState("active");
-  const [deals] = useState(mockDeals);
-
-  // const navigate = useNavigate();
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-  };
+export default function Index() {
+  const { activeTab, deals, setActiveTab, formatCurrency } = useDeals();
 
   const getStageIcon = (stage: string) => {
     switch (stage) {
@@ -148,7 +45,6 @@ export default function DealsPage() {
         return <Clock className="h-4 w-4" />;
     }
   };
-
   return (
     <div className="min-h-screen bg-[#F5F8FE]">
       <Navigation userRole="seller" userInfo={{ name: "Jane Doe" }} />

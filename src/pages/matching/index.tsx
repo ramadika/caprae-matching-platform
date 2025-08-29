@@ -1,143 +1,26 @@
-import { useState } from "react";
-// import { useNavigate } from "react-router";
+import { useMatching } from "@/hooks/useMatching";
 import { Navigation } from "@/components/navigation";
+import { BuyerProfileCard } from "@/components/card-profile";
+import { BuyerProfileDetailed } from "@/components/detail-profile";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BuyerProfileCard } from "@/components/card-profile";
-import { BuyerProfileDetailed } from "@/components/detail-profile";
 import { RefreshCw, Heart, X, Sparkles } from "lucide-react";
 
-// Mock buyer profiles data
-const mockBuyerProfiles = [
-  {
-    id: "1",
-    name: "Michael Chen",
-    company: "Growth Ventures LLC",
-    avatar: "",
-    location: "San Francisco, CA",
-    budget: { min: 2000000, max: 5000000 },
-    industries: ["Technology", "SaaS", "E-commerce"],
-    experience: "4+ acquisitions",
-    timeline: "3-6 months",
-    verified: true,
-    rating: 4.8,
-    totalDeals: 12,
-    bio: "Experienced tech entrepreneur and investor focusing on profitable SaaS businesses with strong recurring revenue. Looking for businesses with proven product-market fit and growth potential.",
-    lookingFor: ["Recurring Revenue", "Growth Potential", "Strong Team"],
-  },
-  {
-    id: "2",
-    name: "Sarah Johnson",
-    company: "Strategic Acquisitions Inc",
-    avatar: "",
-    location: "Austin, TX",
-    budget: { min: 1000000, max: 3000000 },
-    industries: ["Healthcare", "Professional Services", "Technology"],
-    experience: "1-3 acquisitions",
-    timeline: "6-12 months",
-    verified: true,
-    rating: 4.6,
-    totalDeals: 5,
-    bio: "Former healthcare executive transitioning to business ownership. Particularly interested in service-based businesses with established customer relationships and steady cash flow.",
-    lookingFor: [
-      "Stable Cash Flow",
-      "Established Customer Base",
-      "Service Business",
-    ],
-  },
-  {
-    id: "3",
-    name: "David Rodriguez",
-    company: "Rodriguez Family Office",
-    avatar: "",
-    location: "Miami, FL",
-    budget: { min: 3000000, max: 8000000 },
-    industries: ["Manufacturing", "Real Estate", "Retail"],
-    experience: "Professional investor",
-    timeline: "I'm flexible",
-    verified: true,
-    rating: 4.9,
-    totalDeals: 28,
-    bio: "Third-generation family business investor with extensive experience in traditional industries. Focused on businesses with strong fundamentals and opportunities for operational improvements.",
-    lookingFor: [
-      "Traditional Business",
-      "Operational Efficiency",
-      "Family Values",
-    ],
-  },
-  {
-    id: "4",
-    name: "Emily Watson",
-    company: "Watson Capital Partners",
-    avatar: "",
-    location: "Chicago, IL",
-    budget: { min: 1500000, max: 4000000 },
-    industries: ["E-commerce", "Retail", "Consumer Goods"],
-    experience: "First-time buyer",
-    timeline: "Within 3 months",
-    verified: true,
-    rating: 4.7,
-    totalDeals: 0,
-    bio: "E-commerce executive with 15 years of experience building online brands. Ready to acquire my first business and leverage my digital marketing expertise to drive growth.",
-    lookingFor: [
-      "Digital Business",
-      "Growth Opportunity",
-      "Marketing Potential",
-    ],
-  },
-];
-
-export default function MatchingInterface() {
-  const [currentProfileIndex, setCurrentProfileIndex] = useState(0);
-  const [matches, setMatches] = useState<string[]>([]);
-  const [passed, setPassed] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [profiles] = useState(mockBuyerProfiles);
-  const [selectedProfile, setSelectedProfile] = useState<
-    (typeof mockBuyerProfiles)[0] | null
-  >(null);
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-
-  // const navigate = useNavigate();
-
-  const currentProfile = profiles[currentProfileIndex];
-
-  const handleLike = (profileId: string) => {
-    setMatches((prev) => [...prev, profileId]);
-    moveToNext();
-    console.log("matches", matches);
-  };
-
-  const handlePass = (profileId: string) => {
-    setPassed((prev) => [...prev, profileId]);
-    moveToNext();
-  };
-
-  const moveToNext = () => {
-    console.log("passed", passed);
-    if (currentProfileIndex < profiles.length - 1) {
-      setCurrentProfileIndex((prev) => prev + 1);
-    } else {
-      // Load more profiles or show completion
-      setIsLoading(true);
-      setTimeout(() => {
-        setIsLoading(false);
-        // Reset for demo purposes
-        setCurrentProfileIndex(0);
-        setMatches([]);
-        setPassed([]);
-      }, 2000);
-    }
-  };
-
-  const handleViewProfile = (profileId: string) => {
-    const profile = profiles.find((p) => p.id === profileId);
-    if (profile) {
-      setSelectedProfile(profile);
-      setIsProfileModalOpen(true);
-    }
-  };
+export default function Index() {
+  const {
+    isLoading,
+    currentProfile,
+    currentProfileIndex,
+    profiles,
+    selectedProfile,
+    isProfileModalOpen,
+    setCurrentProfileIndex,
+    setIsProfileModalOpen,
+    handleLike,
+    handlePass,
+    handleViewProfile,
+  } = useMatching();
 
   if (isLoading) {
     return (

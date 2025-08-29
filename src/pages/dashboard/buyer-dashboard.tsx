@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { NavLink } from "react-router";
+import { useBuyerDashboard } from "@/hooks/useBuyerDashboard";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,81 +21,10 @@ import {
   Filter,
   Bell,
 } from "lucide-react";
-import { NavLink } from "react-router";
+import { recentBusinesses, notifications } from "@/utils/constants";
 
-export default function BuyerDashboard() {
-  const [stats] = useState({
-    savedBusinesses: 15,
-    activeOffers: 3,
-    matches: 12,
-    budget: 3500000,
-  });
-
-  const recentBusinesses = [
-    {
-      id: "1",
-      name: "TechFlow SaaS",
-      industry: "Technology",
-      revenue: "$2.4M",
-      askingPrice: "$7.2M",
-      location: "San Francisco, CA",
-      seller: "Jane Doe",
-      match: 94,
-      liked: true,
-      verified: true,
-    },
-    {
-      id: "2",
-      name: "GreenLeaf Consulting",
-      industry: "Professional Services",
-      revenue: "$1.8M",
-      askingPrice: "$4.5M",
-      location: "Austin, TX",
-      seller: "Mark Wilson",
-      match: 87,
-      liked: false,
-      verified: true,
-    },
-    {
-      id: "3",
-      name: "Urban Eats Delivery",
-      industry: "Food & Beverage",
-      revenue: "$3.1M",
-      askingPrice: "$9.3M",
-      location: "Chicago, IL",
-      seller: "Sarah Kim",
-      match: 91,
-      liked: true,
-      verified: true,
-    },
-  ];
-
-  const notifications = [
-    {
-      id: 1,
-      text: "TechFlow SaaS seller wants to connect",
-      time: "2h ago",
-      type: "match",
-    },
-    {
-      id: 2,
-      text: "New business matching your criteria",
-      time: "5h ago",
-      type: "business",
-    },
-    {
-      id: 3,
-      text: "Your offer on GreenLeaf was declined",
-      time: "1d ago",
-      type: "offer",
-    },
-    {
-      id: 4,
-      text: "Document request from Urban Eats",
-      time: "2d ago",
-      type: "document",
-    },
-  ];
+export default function Index() {
+  const { stats } = useBuyerDashboard();
 
   return (
     <div className="min-h-screen bg-[#F5F8FE]">

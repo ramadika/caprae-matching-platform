@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import {
   Building,
   Building2,
@@ -7,7 +8,6 @@ import {
   ArrowRight,
   Zap,
 } from "lucide-react";
-import { NavLink } from "react-router";
 
 export default function Index() {
   return (

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { NavLink } from "react-router";
+import { useSellerDashboard } from "@/hooks/useSellerDashboard";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,49 +21,10 @@ import {
   Star,
   Brain,
 } from "lucide-react";
-import { NavLink } from "react-router";
+import { recentMatches } from "@/utils/constants";
 
-export default function SellerDashboard() {
-  const [stats] = useState({
-    profileViews: 127,
-    likes: 23,
-    matches: 8,
-    revenue: 2450000,
-    growth: 12.5,
-  });
-
-  const recentMatches = [
-    {
-      id: "1",
-      name: "Michael Chen",
-      company: "Growth Ventures",
-      avatar: "",
-      budget: "$2M - $5M",
-      match: 94,
-      lastActive: "2 hours ago",
-      status: "interested",
-    },
-    {
-      id: "2",
-      name: "Sarah Johnson",
-      company: "Tech Acquisitions LLC",
-      avatar: "",
-      budget: "$1M - $3M",
-      match: 87,
-      lastActive: "1 day ago",
-      status: "viewing",
-    },
-    {
-      id: "3",
-      name: "David Rodriguez",
-      company: "Strategic Partners",
-      avatar: "",
-      budget: "$3M - $8M",
-      match: 91,
-      lastActive: "3 days ago",
-      status: "matched",
-    },
-  ];
+export default function Index() {
+  const { stats } = useSellerDashboard();
 
   return (
     <div className="min-h-screen bg-[#F5F8FE]">
