@@ -189,8 +189,12 @@ export default function SellerDashboard() {
                       Buyers who are interested in your business
                     </CardDescription>
                   </div>
-                  <Button variant="outline" size="sm">
-                    View All
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-4 bg-[#F95738] text-white hover:border-[#F95738] hover:bg-white hover:text-[#F95738] cursor-pointer"
+                  >
+                    <NavLink to="/deals">View All Deals</NavLink>
                     <ChevronRight className="h-4 w-4 ml-1" />
                   </Button>
                 </div>

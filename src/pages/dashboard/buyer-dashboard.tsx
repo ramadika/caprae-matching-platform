@@ -190,7 +190,7 @@ export default function BuyerDashboard() {
                   business type
                 </p>
               </div>
-              <Button className="w-8/12 font-semibold tracking-wide text-lg py-2 border bg-[#F95738] hover:border-[#F95738] hover:bg-white hover:text-[#F95738]">
+              <Button className="w-8/12 font-semibold tracking-wide text-lg py-2 border bg-[#F95738] hover:border-[#F95738] hover:bg-white hover:text-[#F95738] cursor-pointer">
                 <NavLink to="/discover" className="flex items-center gap-2">
                   <Eye />
                   Start Matching
@@ -400,8 +400,12 @@ export default function BuyerDashboard() {
                     </div>
                   </div>
                 ))}
-                <Button variant="outline" size="sm" className="w-full mt-4">
-                  View All Notifications
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full mt-4 bg-[#F95738] text-white hover:border-[#F95738] hover:bg-white hover:text-[#F95738] cursor-pointer"
+                >
+                  <NavLink to="/deals">View Deals Activitis</NavLink>
                 </Button>
               </CardContent>
             </Card>
