@@ -123,14 +123,6 @@ Our color palette was carefully chosen to convey trust, sophistication, and ener
 - **Quick decisions**: Reduces cognitive load in screening process
 - **Gamification**: Makes B2B process more engaging
 
-**Essential Information Hierarchy**:
-
-```
-Primary: Name, Company, Budget/Valuation
-Secondary: Location, Experience, Rating
-Tertiary: Industries, Description, Details
-```
-
 ### 3. Deal Management Dashboard
 
 **AI-Powered Due Diligence**:
@@ -177,14 +169,13 @@ Valuation Discussion → Negotiation → Legal Review → Closing
 ```bash
 Node.js 18+
 npm or yarn
-Git
 ```
 
 ### Installation
 
 ```bash
 # Clone repository
-git clone [repository-url]
+git clone https://github.com/ramadika/caprae-matching-platform.git
 
 # Install dependencies
 npm install
