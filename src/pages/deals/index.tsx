@@ -69,40 +69,40 @@ export default function Index() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-md:gap-4">
           <Card>
             <CardContent>
-              <div className="flex items-center justify-between">
-                <div>
+              <div className="flex items-center justify-between max-lg:flex-col max-lg:gap-2">
+                <div className="max-lg:order-2 max-lg:text-center">
                   <p className="text-sm text-muted-foreground">Active Deals</p>
-                  <p className="text-2xl font-bold text-foreground">
+                  <p className="text-2xl font-bold text-foreground max-lg:text-xl">
                     {deals.length}
                   </p>
                 </div>
-                <FileText className="h-8 w-8 text-[#0D3B66]" />
+                <FileText className="h-8 w-8 text-[#0D3B66] max-lg:order-1" />
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent>
-              <div className="flex items-center justify-between">
-                <div>
+              <div className="flex items-center justify-between max-lg:flex-col max-lg:gap-2">
+                <div className="max-lg:order-2 max-lg:text-center">
                   <p className="text-sm text-muted-foreground">Highest Offer</p>
-                  <p className="text-2xl font-bold text-foreground">
+                  <p className="text-2xl font-bold text-foreground max-lg:text-xl">
                     {formatCurrency(
                       Math.max(...deals.map((d) => d.offerAmount))
                     )}
                   </p>
                 </div>
-                <TrendingUp className="h-8 w-8 text-[#048A81]" />
+                <TrendingUp className="h-8 w-8 text-[#048A81] max-lg:order-1" />
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent>
-              <div className="flex items-center justify-between">
-                <div>
+              <div className="flex items-center justify-between max-lg:flex-col max-lg:gap-2">
+                <div className="max-lg:order-2 max-lg:text-center">
                   <p className="text-sm text-muted-foreground">Avg Progress</p>
-                  <p className="text-2xl font-bold text-foreground">
+                  <p className="text-2xl font-bold text-foreground max-lg:text-xl">
                     {Math.round(
                       deals.reduce((acc, deal) => acc + deal.progress, 0) /
                         deals.length
@@ -110,19 +110,21 @@ export default function Index() {
                     %
                   </p>
                 </div>
-                <Clock className="h-8 w-8 text-[#F95738]" />
+                <Clock className="h-8 w-8 text-[#F95738] max-lg:order-1" />
               </div>
             </CardContent>
           </Card>
 
           <Card className="shadow-card">
             <CardContent>
-              <div className="flex items-center justify-between">
-                <div>
+              <div className="flex items-center justify-between max-lg:flex-col max-lg:gap-2">
+                <div className="max-lg:order-2 max-lg:text-center">
                   <p className="text-sm text-muted-foreground">Est. Close</p>
-                  <p className="text-2xl font-bold text-foreground">45d</p>
+                  <p className="text-2xl font-bold text-foreground max-lg:text-xl">
+                    45d
+                  </p>
                 </div>
-                <Calendar className="h-8 w-8 text-[#048A81]" />
+                <Calendar className="h-8 w-8 text-[#048A81] max-lg:order-1" />
               </div>
             </CardContent>
           </Card>
